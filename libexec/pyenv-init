@@ -77,8 +77,8 @@ if [ -z "$print" ]; then
       echo 'status --is-interactive; and source (pyenv init -|psub)'
       ;;
     xonsh )
-      echo 'pyenv init - > ~/.pyenv-init-output.xsh'
-      echo 'source ~/.pyenv-init-output.xsh'
+      echo "pyenv init - --no-rehash > ${PYENV_ROOT}/cache/init.xsh"
+      echo "source ${PYENV_ROOT}/cache/init.xsh"
       ;;
     * )
       echo 'eval "$(pyenv init -)"'
@@ -142,7 +142,7 @@ EOS
 xonsh )
   cat <<EOS
 import shlex
-def _pyenv(args):
+def _pyenv(args, stdin=None, stdout=None, stderr=None, spec=None):
    if not args:
       command pyenv
       return
