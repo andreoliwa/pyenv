@@ -48,7 +48,7 @@ This project was forked from [rbenv](https://github.com/rbenv/rbenv) and
 * **[Installation](#installation)**
   * [Basic GitHub Checkout](#basic-github-checkout)
     * [Upgrading](#upgrading)
-    * [Homebrew on Mac OS X](#homebrew-on-mac-os-x)
+    * [Homebrew on macOS](#homebrew-on-macos)
     * [Advanced Configuration](#advanced-configuration)
     * [Uninstalling Python Versions](#uninstalling-python-versions)
 * **[Command Reference](#command-reference)**
@@ -167,7 +167,7 @@ We'd recommend to install pyenv-virtualenv as well if you have some plan to play
 
 ## Installation
 
-If you're on Mac OS X, consider [installing with Homebrew](#homebrew-on-mac-os-x).
+If you're on macOS, consider [installing with Homebrew](#homebrew-on-macos).
 
 
 ### The automatic installer
@@ -205,8 +205,9 @@ easy to fork and contribute any changes back upstream.
     ```sh
     $ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bash_profile
     ```
-    **Zsh note**: Modify your `~/.zshenv` file instead of `~/.bash_profile`.
-    **Ubuntu and Fedora note**: Modify your `~/.bashrc` file instead of `~/.bash_profile`.
+    - **Zsh note**: Modify your `~/.zshenv` file instead of `~/.bash_profile`.
+    - **fish note**: Use `pyenv init - | source` instead of `eval (pyenv init -)`.
+    - **Ubuntu and Fedora note**: Modify your `~/.bashrc` file instead of `~/.bash_profile`.
 
     **General warning**: There are some systems where the `BASH_ENV` variable is configured
     to point to `.bashrc`. On such systems you should almost certainly put the abovementioned line
@@ -286,10 +287,10 @@ uninstall from the system.
 
         brew uninstall pyenv
 
-### Homebrew on Mac OS X
+### Homebrew on macOS
 
-You can also install pyenv using the [Homebrew](http://brew.sh)
-package manager for Mac OS X.
+You can also install pyenv using the [Homebrew](https://brew.sh)
+package manager for macOS.
 
     $ brew update
     $ brew install pyenv

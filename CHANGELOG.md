@@ -1,5 +1,19 @@
 ## Version History
 
+## 1.2.9
+
+* python-build: Add CPython 3.7.2 and CPython 3.6.8 (#1256)
+* python-build: Add anaconda[23]-5.3.1 (#1246)
+* python-build: Add Anaconda 2018.12 (#1259)
+* python-build: Fix ironpython-dev git repo url (#1260)
+* python-build: Add `OPENSSL_NO_SSL3` patch for CPython 3.3.7 (#1263)
+
+## 1.2.8
+
+* python-build: Add CPython 3.7.1
+* python-build: Add CPython 3.6.7
+* python-build: Add anaconda[23]-5.3.0 (#1220)
+
 ## 1.2.7
 
 * python-build: Add CPython 3.5.6 (#1199)
