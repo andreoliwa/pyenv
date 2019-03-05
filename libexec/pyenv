@@ -145,7 +145,16 @@ case "$command" in
       exec pyenv-help "$command"
     fi
   else
-    exec "$command_path" "$@"
+    shell="$(basename "${SHELL}")"
+    case "$shell" in
+    xonsh )
+      # Remove quotes from arguments
+      exec "$command_path" $@
+      ;;
+    * )
+      exec "$command_path" "$@"
+      ;;
+    esac
   fi
   ;;
 esac
