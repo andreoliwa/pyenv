@@ -149,7 +149,7 @@ def _pyenv(args, stdin=None, stdout=None, stderr=None, spec=None):
    chosen_command = args[0]
    extra_args = ' '.join([shlex.quote(a) for a in args[1:]])
    if chosen_command in "${commands[*]}".split(' '):
-      source-bash \$(pyenv @(f'sh-{chosen_command}') @(extra_args))
+      source-bash --interactive False \$(pyenv @(f'sh-{chosen_command}') @(extra_args))
    else:
       command pyenv @(chosen_command) @(extra_args)
 aliases["pyenv"] = _pyenv

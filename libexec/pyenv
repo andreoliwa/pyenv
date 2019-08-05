@@ -149,7 +149,7 @@ case "$command" in
     case "$shell" in
     xonsh )
       # Remove quotes from arguments
-      exec "$command_path" $@
+      exec "$command_path" "$@"
       ;;
     * )
       exec "$command_path" "$@"
